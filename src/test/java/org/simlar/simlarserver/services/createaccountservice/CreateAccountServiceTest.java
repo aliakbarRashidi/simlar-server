@@ -355,7 +355,6 @@ public final class CreateAccountServiceTest {
 
         /// check limit reset after an hour
         reduceAccountCreationTimestamp("*16005022141*", Duration.ofMinutes(61));
-        reduceAccountCreationTimestamp("*16005022142*", Duration.ofMinutes(61));
         reset(smsService);
         assertCreateAccountRequestSuccess(telephoneNumber, "192.168.1.23");
     }
